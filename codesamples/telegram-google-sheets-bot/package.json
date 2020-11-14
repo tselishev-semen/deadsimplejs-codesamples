@@ -1,0 +1,18 @@
+{
+  "name": "telegram-google-sheets-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "google-spreadsheet": "^3.0.13",
+    "googleapis": "^62.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "serverless": "^2.9.0",
+    "serverless-dotenv-plugin": "^3.1.0",
+    "serverless-ngrok-tunnel": "^0.0.3",
+    "serverless-offline": "^6.8.0"
+  }
+}

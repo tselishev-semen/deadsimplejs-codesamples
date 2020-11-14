@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": [
+    "./codesamples/*"
+  ],
+  "name": "deadsimplejs-codesamples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

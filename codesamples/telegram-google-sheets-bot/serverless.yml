@@ -1,0 +1,44 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: sheet-bot
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+
+functions:
+  sheetbot:
+    handler: bot-handler.webHook
+    events:
+      - http:
+          method: any
+          path: web-hook
+  api:
+    handler: api-handler.getSheet
+    events:
+      - http:
+          method: any
+          path: get-sheet
+plugins:
+  - serverless-ngrok-tunnel
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+custom:
+  ngrokTunnel:
+    tunnels: # required
+      - port: 3000 # required
+
+frameworkVersion: '2'
