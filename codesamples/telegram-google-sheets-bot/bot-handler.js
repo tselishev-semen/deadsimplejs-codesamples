@@ -41,7 +41,7 @@ module.exports.webHook = async (event) => {
         const body = JSON.parse(event.body);
         const allowedIds = process.env.user_ids.split(',');
         const fromId = (body.callback_query || body.message).from.id;
-        if (!allowedIds.includes(fromId)) {
+        if (!allowedIds.includes(String(fromId))) {
             return {
                 statusCode: 200,
                 body: JSON.stringify({status: 'OK'}),
